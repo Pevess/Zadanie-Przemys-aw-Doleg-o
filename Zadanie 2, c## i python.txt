@@ -1,0 +1,55 @@
+PYTHON
+
+def konwerter_temperatur():
+    kierunek = input("Podaj kierunek konwersji (C lub F): ").upper()
+    temperatura = float(input("Podaj temperaturę: "))
+
+    if kierunek == 'C':
+        wynik = temperatura * 1.8 + 32
+        return f"{temperatura}°C = {wynik}°F"
+    elif kierunek == 'F':
+        wynik = (temperatura - 32) / 1.8
+        return f"{temperatura}°F = {wynik:.2f}°C"
+    else:
+        return "Nieznany kierunek konwersji."
+
+print(konwerter_temperatur())
+
+
+c##
+
+using System;
+
+class Program
+{
+    static void KonwerterTemperatur()
+    {
+        Console.Write("Podaj kierunek konwersji (C lub F): ");
+        string kierunek = Console.ReadLine().ToUpper();
+
+        Console.Write("Podaj temperaturę: ");
+        double temp = Convert.ToDouble(Console.ReadLine());
+
+        double wynik;
+
+        if (kierunek == "C")
+        {
+            wynik = temp * 1.8 + 32;
+            Console.WriteLine($"{temp}°C = {wynik}°F");
+        }
+        else if (kierunek == "F")
+        {
+            wynik = (temp - 32) / 1.8;
+            Console.WriteLine($"{temp}°F = {wynik:F2}°C");
+        }
+        else
+        {
+            Console.WriteLine("Nieznany kierunek konwersji.");
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        KonwerterTemperatur();
+    }
+}
